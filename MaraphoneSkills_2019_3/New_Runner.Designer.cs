@@ -62,6 +62,7 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Show = new System.Windows.Forms.Button();
             this.btn_show0 = new System.Windows.Forms.Button();
+            this.lbl_Error = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.pnl_Timer.SuspendLayout();
@@ -167,7 +168,7 @@
             // txt_Password
             // 
             this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Password.Location = new System.Drawing.Point(75, 248);
+            this.txt_Password.Location = new System.Drawing.Point(75, 259);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(229, 20);
             this.txt_Password.TabIndex = 11;
@@ -177,7 +178,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel2.Location = new System.Drawing.Point(75, 271);
+            this.panel2.Location = new System.Drawing.Point(75, 282);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 5);
             this.panel2.TabIndex = 12;
@@ -270,9 +271,10 @@
             // 
             // lbl_PictureName
             // 
-            this.lbl_PictureName.Location = new System.Drawing.Point(380, 225);
+            this.lbl_PictureName.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lbl_PictureName.Location = new System.Drawing.Point(412, 225);
             this.lbl_PictureName.Name = "lbl_PictureName";
-            this.lbl_PictureName.Size = new System.Drawing.Size(207, 20);
+            this.lbl_PictureName.Size = new System.Drawing.Size(175, 125);
             this.lbl_PictureName.TabIndex = 15;
             // 
             // btn_Back
@@ -288,6 +290,7 @@
             this.btn_Back.TabIndex = 16;
             this.btn_Back.Text = "Просмотр";
             this.btn_Back.UseVisualStyleBackColor = false;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // dateTimePicker1
             // 
@@ -357,6 +360,7 @@
             this.btn_done.TabIndex = 16;
             this.btn_done.Text = "Готово";
             this.btn_done.UseVisualStyleBackColor = false;
+            this.btn_done.Click += new System.EventHandler(this.btn_done_Click);
             // 
             // btn_Cancel
             // 
@@ -381,7 +385,7 @@
             this.btn_Show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Show.ForeColor = System.Drawing.Color.White;
             this.btn_Show.Image = global::MaraphoneSkills_2019_3.Properties.Resources.icons8_visible_filled_16;
-            this.btn_Show.Location = new System.Drawing.Point(310, 248);
+            this.btn_Show.Location = new System.Drawing.Point(310, 259);
             this.btn_Show.Name = "btn_Show";
             this.btn_Show.Size = new System.Drawing.Size(25, 25);
             this.btn_Show.TabIndex = 18;
@@ -401,6 +405,18 @@
             this.btn_show0.TabIndex = 18;
             this.btn_show0.UseVisualStyleBackColor = false;
             // 
+            // lbl_Error
+            // 
+            this.lbl_Error.AutoSize = true;
+            this.lbl_Error.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_Error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_Error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Error.Location = new System.Drawing.Point(81, 240);
+            this.lbl_Error.Name = "lbl_Error";
+            this.lbl_Error.Size = new System.Drawing.Size(0, 16);
+            this.lbl_Error.TabIndex = 0;
+            this.lbl_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // New_Runner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -408,6 +424,7 @@
             this.ClientSize = new System.Drawing.Size(891, 638);
             this.Controls.Add(this.btn_show0);
             this.Controls.Add(this.btn_Show);
+            this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
@@ -484,5 +501,6 @@
         private System.Windows.Forms.Button btn_done;
         private System.Windows.Forms.Button btn_show0;
         private System.Windows.Forms.Button btn_Show;
+        private System.Windows.Forms.Label lbl_Error;
     }
 }

@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,12 @@
     </Compile>
     <Compile Include="New_Runner.Designer.cs">
       <DependentUpon>New_Runner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="proposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proposal.Designer.cs">
+      <DependentUpon>proposal.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectTypeRunner.cs">
       <SubType>Form</SubType>
@@ -84,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="New_Runner.resx">
       <DependentUpon>New_Runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="proposal.resx">
+      <DependentUpon>proposal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectTypeRunner.resx">
       <DependentUpon>SelectTypeRunner.cs</DependentUpon>

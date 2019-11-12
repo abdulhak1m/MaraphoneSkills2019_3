@@ -33,15 +33,15 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.topPanel = new System.Windows.Forms.Panel();
             this.pnl_Timer = new System.Windows.Forms.Panel();
+            this.lbl_Timer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Info = new System.Windows.Forms.Label();
-            this.lbl_Timer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnl_main = new System.Windows.Forms.Panel();
-            this.I_Runner = new System.Windows.Forms.Button();
-            this.I_sponsor = new System.Windows.Forms.Button();
             this.About = new System.Windows.Forms.Button();
+            this.I_sponsor = new System.Windows.Forms.Button();
             this.btn_Login = new System.Windows.Forms.Button();
+            this.I_Runner = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.pnl_Timer.SuspendLayout();
@@ -77,6 +77,16 @@
             this.pnl_Timer.Size = new System.Drawing.Size(863, 44);
             this.pnl_Timer.TabIndex = 2;
             // 
+            // lbl_Timer
+            // 
+            this.lbl_Timer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_Timer.Location = new System.Drawing.Point(0, 0);
+            this.lbl_Timer.Name = "lbl_Timer";
+            this.lbl_Timer.Size = new System.Drawing.Size(863, 44);
+            this.lbl_Timer.TabIndex = 0;
+            this.lbl_Timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lbl_Info);
@@ -99,16 +109,6 @@
             this.lbl_Info.Text = "MaraphoneSkills 2019";
             this.lbl_Info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_Timer
-            // 
-            this.lbl_Timer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_Timer.Location = new System.Drawing.Point(0, 0);
-            this.lbl_Timer.Name = "lbl_Timer";
-            this.lbl_Timer.Size = new System.Drawing.Size(863, 44);
-            this.lbl_Timer.TabIndex = 0;
-            this.lbl_Timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -125,20 +125,19 @@
             this.pnl_main.Size = new System.Drawing.Size(863, 322);
             this.pnl_main.TabIndex = 4;
             // 
-            // I_Runner
+            // About
             // 
-            this.I_Runner.BackColor = System.Drawing.Color.RoyalBlue;
-            this.I_Runner.FlatAppearance.BorderSize = 0;
-            this.I_Runner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.I_Runner.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.I_Runner.ForeColor = System.Drawing.Color.White;
-            this.I_Runner.Location = new System.Drawing.Point(242, 40);
-            this.I_Runner.Name = "I_Runner";
-            this.I_Runner.Size = new System.Drawing.Size(378, 67);
-            this.I_Runner.TabIndex = 2;
-            this.I_Runner.Text = "Я хочу стать бегуном";
-            this.I_Runner.UseVisualStyleBackColor = false;
-            this.I_Runner.Click += new System.EventHandler(this.I_Runner_Click);
+            this.About.BackColor = System.Drawing.Color.RoyalBlue;
+            this.About.FlatAppearance.BorderSize = 0;
+            this.About.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.About.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.About.ForeColor = System.Drawing.Color.White;
+            this.About.Location = new System.Drawing.Point(242, 208);
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(378, 67);
+            this.About.TabIndex = 2;
+            this.About.Text = "Я хочу узнать больше о событии";
+            this.About.UseVisualStyleBackColor = false;
             // 
             // I_sponsor
             // 
@@ -154,20 +153,6 @@
             this.I_sponsor.Text = "Я хочу стать спонсором";
             this.I_sponsor.UseVisualStyleBackColor = false;
             // 
-            // About
-            // 
-            this.About.BackColor = System.Drawing.Color.RoyalBlue;
-            this.About.FlatAppearance.BorderSize = 0;
-            this.About.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.About.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.About.ForeColor = System.Drawing.Color.White;
-            this.About.Location = new System.Drawing.Point(242, 215);
-            this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(378, 67);
-            this.About.TabIndex = 2;
-            this.About.Text = "Я хочу узнать больше о событии";
-            this.About.UseVisualStyleBackColor = false;
-            // 
             // btn_Login
             // 
             this.btn_Login.BackColor = System.Drawing.Color.RoyalBlue;
@@ -182,6 +167,21 @@
             this.btn_Login.Text = "Войти";
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
+            // 
+            // I_Runner
+            // 
+            this.I_Runner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.I_Runner.FlatAppearance.BorderSize = 0;
+            this.I_Runner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.I_Runner.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.I_Runner.ForeColor = System.Drawing.Color.White;
+            this.I_Runner.Location = new System.Drawing.Point(242, 40);
+            this.I_Runner.Name = "I_Runner";
+            this.I_Runner.Size = new System.Drawing.Size(378, 67);
+            this.I_Runner.TabIndex = 2;
+            this.I_Runner.Text = "Я хочу стать бегуном";
+            this.I_Runner.UseVisualStyleBackColor = false;
+            this.I_Runner.Click += new System.EventHandler(this.I_Runner_Click);
             // 
             // close
             // 

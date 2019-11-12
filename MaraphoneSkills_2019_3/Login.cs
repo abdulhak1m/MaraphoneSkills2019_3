@@ -83,6 +83,7 @@ namespace MaraphoneSkills_2019_3
             if(txt_Password.Text == "Введите Пароль!")
             {
                 txt_Password.Text = "";
+                txt_Password.UseSystemPasswordChar = false;
                 txt_Password.ForeColor = Color.Black;
             }
         }
@@ -92,6 +93,7 @@ namespace MaraphoneSkills_2019_3
             if(txt_Password.Text == "")
             {
                 txt_Password.Text = "Введите Пароль!";
+                txt_Password.UseSystemPasswordChar = false;
                 txt_Password.ForeColor = Color.SteelBlue;
             }
         }

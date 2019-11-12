@@ -11,3 +11,17 @@ H:\Widows Forms\MaraphoneSkills 2019\MaraphoneSkills_2019_3\MaraphoneSkills_2019
 H:\Widows Forms\MaraphoneSkills 2019\MaraphoneSkills_2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.Login.resources
 H:\Widows Forms\MaraphoneSkills 2019\MaraphoneSkills_2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.SelectTypeRunner.resources
 H:\Widows Forms\MaraphoneSkills 2019\MaraphoneSkills_2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.New_Runner.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\bin\Release\MaraphoneSkills_2019_3.exe.config
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\bin\Release\MaraphoneSkills_2019_3.exe
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\bin\Release\MaraphoneSkills_2019_3.pdb
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.Login.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.New_Runner.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.SelectTypeRunner.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.StartPosition.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.Properties.Resources.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.csproj.GenerateResource.cache
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.csproj.CopyComplete
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.exe
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.pdb
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.csprojAssemblyReference.cache
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.proposal.resources

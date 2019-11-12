@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace MaraphoneSkills_2019_3
 {
@@ -53,6 +57,25 @@ namespace MaraphoneSkills_2019_3
                 else
                     text.UseSystemPasswordChar = true;
             };
+        }
+        private bool Check()
+        {
+            if (txt_Password.Text != "Введите Пароль!" || txt_Password.Text != "" &&
+                txt_ConfirmPassword.Text != "Подтвердите Пароль!" || txt_ConfirmPassword.Text == "")
+            {
+                if (txt_ConfirmPassword.Text != txt_Password.Text)
+                {
+                    lbl_Error.Text = "Внимание, пароли не совпадают!";
+                    return false;
+                }
+                else
+                {
+                    lbl_Error.Text = "";
+                    return true;
+                }
+            }
+            else
+                return false;
         }
         // передвижение формы
         private void LocationForm()
@@ -181,6 +204,130 @@ namespace MaraphoneSkills_2019_3
                 start.ShowDialog();
                 Close();
             }
+        }
+        OpenFileDialog file = new OpenFileDialog();
+        // метод выбора изображения
+        private void Open()
+        {
+            file.InitialDirectory = @"C:\Users\magom\Pictures";
+            file.Filter = "Image Files (*.BMP; *.PNG;*.JPG;*.GIF)|*.BMP;*.PNG;*.JPG;*.GIF| All Files (*.*)|*.*";
+            file.FilterIndex = 2;
+            if(file.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(file.FileName);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+                lbl_PictureName.Text = file.SafeFileName.ToString();
+            }
+        }
+        private async void btn_done_Click(object sender, EventArgs e)
+        {
+            if (!Check())
+                return;
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                byte[] a = ms.GetBuffer();
+                ms.Close();
+
+                if (txt_Email.Text == "Введите Email!" && txt_Password.Text == "Введите Пароль!" &&
+                    txt_Name.Text == "Введите Имя!" && txt_Surname.Text == "Введите Фамилию!" &&
+                    cmb_Sex.SelectedIndex == 0 && cmb_County.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Чтобы зарегистрироваться в системе, необходимо" +
+                        " заполнить все поля, пожалуйста заполните" +
+                        " поля надлежащим образом и повторите попытку регистрации!",
+                        "Заполните поля!", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                {
+                    Regex emailRegex = new Regex(@"\w{2,10}@\w{2,10}.\w{2,10}");
+                    Match emailMatch = emailRegex.Match(txt_Email.Text);
+                    if (emailMatch.Value == "")
+                        MessageBox.Show("Некорректный формат Email!",
+                            "Увдомление системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        bool digit = false;
+                        bool lowChar = false;
+                        bool spec = false;
+
+                        for (int i = 0; i < txt_Password.TextLength; i++)
+                        {
+                            if (char.IsDigit(txt_Password.Text[i]))
+                            {
+                                digit = true;
+                                break;
+                            }
+                        }
+                        for(int i = 0; i < txt_Password.TextLength; i++)
+                        {
+                            if (char.IsLower(txt_Password.Text[i]))
+                            {
+                                lowChar = true;
+                                break;
+                            }
+                        }
+                        for(int i = 0; i < txt_Password.TextLength; i++)
+                        {
+                            if(txt_Password.Text[i] == '#' || txt_Password.Text[i] == '$' ||
+                               txt_Password.Text[i] == '%' || txt_Password.Text[i] == '^' || 
+                               txt_Password.Text[i] == '!' || txt_Password.Text[i] == '@')
+                            {
+                                spec = true;
+                                break;
+                            }
+                        }
+                        if(txt_Password.TextLength < 6 || !spec || !digit || !lowChar)
+                            MessageBox.Show("Некорректный формат пароля! Длина пароля " +
+                                "должно быть не менее 6-ти символов, из которых " +
+                                "должна быть, как минимум одна буква нижнего регистра одна цифра" +
+                                " и одна из следующих символов #,$,%,^,!,@");
+                        DateTime dateOfBirh = Convert.ToDateTime(dateTimePicker1.Value);
+                        if (DateTime.Now.Year - dateOfBirh.Year < 10)
+                        {
+                            MessageBox.Show("Внимание! На момент регистрации Бегуна," +
+                                " его возраст должен составлять не менее 10-ти лет.",
+                                "Уведомление системы!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            using (SqlConnection sql = new SqlConnection(Connection.GetString()))
+                            {
+                                await sql.OpenAsync();
+                                string query = "INSERT INTO Runner VALUES (@email, @password, @name, @surname, @sex, @img_name, @img, @country)";
+                                SqlCommand command = new SqlCommand(query, sql);
+                                command.Parameters.AddWithValue("@email", txt_Email.Text);
+                                command.Parameters.AddWithValue("@password", txt_Password.Text);
+                                command.Parameters.AddWithValue("@name", txt_Name.Text);
+                                command.Parameters.AddWithValue("@surname", txt_Surname.Text);
+                                command.Parameters.AddWithValue("@sex", cmb_Sex.Text);
+                                command.Parameters.AddWithValue("@img_name", lbl_PictureName.Text);
+                                command.Parameters.AddWithValue("@img", a);
+                                command.Parameters.AddWithValue("@country", cmb_County.Text);
+                                await command.ExecuteNonQueryAsync();
+                                MessageBox.Show("Вы успешно зарегистрировались в системе!", "Уведомление системы!",
+                                    MessageBoxButtons.OK ,MessageBoxIcon.Information);
+                                ActiveForm.Hide();
+                                proposal prop = new proposal();
+                                prop.ShowDialog();
+                                Close();
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Уведомления системы!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+             Open();
         }
     }
 }
