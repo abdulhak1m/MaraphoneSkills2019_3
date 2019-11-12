@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaraphoneSkills_2019_3", "MaraphoneSkills_2019_3\MaraphoneSkills_2019_3.csproj", "{F33DE78D-0B20-45AE-BFE5-A822C8794AEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F33DE78D-0B20-45AE-BFE5-A822C8794AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33DE78D-0B20-45AE-BFE5-A822C8794AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33DE78D-0B20-45AE-BFE5-A822C8794AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33DE78D-0B20-45AE-BFE5-A822C8794AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDC24F13-A87A-471D-9324-963E53296E83}
+	EndGlobalSection
+EndGlobal
