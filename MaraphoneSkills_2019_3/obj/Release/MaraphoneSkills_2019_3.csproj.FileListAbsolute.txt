@@ -25,3 +25,5 @@ G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019
 G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.pdb
 G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.csprojAssemblyReference.cache
 G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.proposal.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.MenuRunner.resources
+G:\WinFormApp (Сентябрь)\Подготовка_к_WSR\MaraphoneSkills2019_3\MaraphoneSkills_2019_3\obj\Release\MaraphoneSkills_2019_3.Contact.resources
